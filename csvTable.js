@@ -26,6 +26,7 @@ function convertToTable(input) {
     const rows = lines.map(line => line.split(","))
     const rowsWithDates = rows.map(row => {
         const dateAsArrayOfStrings = row[0].split("/");
+        console.log(dateAsArrayOfStrings);
         const date = new Date();
         date.setUTCFullYear(dateAsArrayOfStrings[2], dateAsArrayOfStrings[1] - 1, dateAsArrayOfStrings[0]);
         return [date, row[1], row[2]];
